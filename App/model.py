@@ -59,14 +59,30 @@ def addBookList (catalog, row):
     books = catalog['booksList']
     book = newBook(row)
     lt.addLast(books, book)
+def addAccidentList (catalog, row):
+    """
+    Adiciona libro a la lista
+    """
+    books = catalog['booksList']
+    book = newBook(row)
+    lt.addLast(books, book)
 
 def addBookMap (catalog, row):
     """
     Adiciona libro al map con key=title
     """
     book = newBook(row)
-    #catalog['booksTree'] = map.put(catalog['booksTree'], int(book['book_id']), book, greater)
-    catalog['booksTree']  = map.put(catalog['booksTree'] , book['title'], book, greater)
+    catalog['booksTree'] = map.put(catalog['booksTree'], int(book['book_id']), book, greater)
+    #catalog['booksTree']  = map.put(catalog['booksTree'] , book['title'], book, greater)
+
+def addAccidentMap (catalog, row):
+    """
+    Adiciona libro al map con key=title
+    """
+    book = newBook(row)
+    catalog['booksTree'] = map.put(catalog['booksTree'], int(book['book_id']), book, greater)
+    #catalog['booksTree']  = map.put(catalog['booksTree'] , book['title'], book, greater)
+
 
 
 # Funciones de consulta
