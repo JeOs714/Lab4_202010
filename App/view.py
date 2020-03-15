@@ -73,9 +73,9 @@ def main():
             print("Recursion Limit:",sys.getrecursionlimit())
             catalog = initCatalog ()
             loadData (catalog)
-            print ('Arbol Libros cargados: ' + str(map.size(catalog['booksTree'])))
-            print ('Lista libros cargados: ' + str(lt.size(catalog['booksList'])))
-            print ('Altura arbol: ' + str(map.height(catalog['booksTree'])))
+            print ('Arbol Accidentes cargados: ' + str(map.size(catalog['AccidentsTree'])))
+            print ('Lista Accidentes cargados: ' + str(lt.size(catalog['AccidentsList'])))
+            print ('Altura arbol: ' + str(map.height(catalog['AccidentsTree'])))
             
         elif int(inputs[0])==2:
             title = input("Nombre del titulo a buscar: ")

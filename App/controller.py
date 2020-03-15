@@ -68,7 +68,7 @@ def loadBooks (catalog, sep=','):
             # Se adiciona el libro a la lista de libros
             model.addBookList(catalog, row)
             # Se adiciona el libro al mapa de libros (key=title)
-            model.addBookMap(catalog, row)
+            #model.addBookMap(catalog, row)
     t1_stop = process_time() #tiempo final
     print("Tiempo de ejecución carga libros:",t1_stop-t1_start," segundos")   
 
@@ -86,9 +86,9 @@ def loadAccidents (catalog, sep=','):
         spamreader = csv.DictReader(csvfile, dialect=dialect)
         for row in spamreader: 
             # Se adiciona el libro a la lista de libros
-            model.addBookList(catalog, row)
+            model.addAccidentList(catalog, row)
             # Se adiciona el libro al mapa de libros (key=title)
-            model.addBookMap(catalog, row)
+            model.addAccidentDate(catalog, row)
     t1_stop = process_time() #tiempo final
     print("Tiempo de ejecución carga libros:",t1_stop-t1_start," segundos")
 
@@ -107,7 +107,8 @@ def loadData (catalog):
     Carga los datos de los archivos y cargar los datos en la
     estructura de datos
     """
-    loadBooks(catalog)    
+    loadBooks(catalog)  
+    loadAccidents(catalog)  
 
 # Funciones llamadas desde la vista y enviadas al modelo
 

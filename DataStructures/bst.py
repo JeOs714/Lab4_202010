@@ -54,6 +54,7 @@ def put (bst, key , value, comparefunction, level=0):
 
     #La funcion de comparación indica la relación de orden entre las llaves    
     cmp = comparefunction (key, bst['key'])
+    
     if (cmp < 0):                                            #La llave a insertar es menor que la raiz
         if (bst['left'] == None):  
             bst['left'] = node.newNode (key, value, 1)
@@ -79,7 +80,7 @@ def get (bst, key, comparefunction):
     """
     element = None
     if ( bst['key'] != None):
-        cmp = comparefunction (key, bst['key'] )
+        cmp = comparefunction (key, bst["key"] )
         if (cmp < 0):
             if (bst['left'] != None):
                 element =  get (bst['left'], key, comparefunction)
